@@ -195,7 +195,7 @@ git push -u origin v2-validacion
 
 Comprueba en GitHub que tu fork tiene ahora dos ramas: `main` y `v2-validacion`.
 
----
+----
 
 ## ✅ Lista de comprobación
 
