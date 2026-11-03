@@ -166,7 +166,9 @@ Implementa el método siguiendo este orden. En cuanto algo falle, llama a `mostr
    ```
 5. **Todo correcto**: quita el error del campo (`setError(null)`), calcula `age * FACTOR_CANINO` y muestra el resultado con `tu_edad_format`.
 
-> ❓ ¿Por qué limitar la edad a 30 evita también el desbordamiento que viste en el Paso 1?
+> ❓ ¿Por qué limitar la edad a 30 evita también el desbordamiento que viste en el Paso 1? 
+> 
+Limitar la edad a 30 hace que el resultado máximo sea 210, muy por debajo del límite de int
 
 ## Paso 11 · Vuelve a probar
 
