@@ -47,4 +47,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void calcularEdad(){
     }
+
+    private void mostrarError(String mensaje) {
+        ageEdit.setError(mensaje);   // 1. Muestra el mensaje en el EditText
+        ageEdit.requestFocus();      // 2. Pone el foco en el EditText
+        resultText.setText("");      // 3. Borra el resultado anterior
+    }
 }
