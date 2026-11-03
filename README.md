@@ -184,6 +184,7 @@ Comprueba que **la app nunca se cierra**:
 
 > 💡 Con el teclado numérico no puedes escribir `abc` ni `-4`. ¿Cómo comprobarías que el `try/catch` funciona? (Pista: quita `inputType` un momento.)
 
+Quitando temporalmente inputType="number" puedo escribir abc o 3.5; el parseInt lanza NumberFormatException, el catch la captura y se muestra error_no_numero sin que la app se cierre.”
 ## Paso 12 · Guarda y sube tu trabajo
 
 ```bash

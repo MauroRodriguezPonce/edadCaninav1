@@ -19,33 +19,20 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        ageEdit = findViewById(R.id.age_input);
-        resultText = findViewById(R.id.result_text);
-
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
         // Declaramos variables
-        EditText ageEdit = findViewById(R.id.age_input);
-        TextView resultText = findViewById(R.id.result_text);
+        ageEdit = findViewById(R.id.age_input);
+        resultText = findViewById(R.id.result_text);
         Button button1 = findViewById(R.id.btn_calc);
 
-
         // Implementar el boton (setOnClickListener)
-        button1.setOnClickListener(view -> calcularEdad()); {
-
-            String ageString = ageEdit.getText().toString();
-            int age = Integer.parseInt(ageString);
-            int dogAge = age * FACTOR_CANINO;
-            resultText.setText(getString(R.string.tu_edad_format, dogAge));
-        };
-
-
+        button1.setOnClickListener(view -> calcularEdad());
     }
 
-    private void calcularEdad(){
+    private void calcularEdad() {
 
         // 1. Leer el texto quitando espacios
         String texto = ageEdit.getText().toString().trim();
@@ -73,7 +60,8 @@ public class MainActivity extends AppCompatActivity {
 
         // 5. Todo correcto: quitar el error y mostrar el resultado
         ageEdit.setError(null);
-        resultText.setText(getString(R.string.tu_edad_format, age * FACTOR_CANINO));
+        int dogAge = age * FACTOR_CANINO;
+        resultText.setText(getString(R.string.tu_edad_format, dogAge));
     }
 
     private void mostrarError(String mensaje) {
