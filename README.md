@@ -72,6 +72,14 @@ En `res/values/strings.xml` añade tres textos nuevos:
 ```
 
 > ❓ ¿Qué significan `%1$d` y `%2$d`? ¿En qué orden se rellenan?
+      
+Son marcadores de posición (placeholders) que Android sustituye por valores cuando llamas a getString(...). Cada parte significa:
+
+% indica el inicio del marcador.
+1$ / 2$ es la posición del argumento que se va a insertar (1º, 2º...).
+d es el tipo: decimal, es decir, un número entero.
+
+Se rellenan según el número, no según dónde aparezcan en el texto
 
 ## Paso 5 · Restringe la entrada desde el layout
 
