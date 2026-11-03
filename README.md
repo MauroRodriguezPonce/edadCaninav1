@@ -130,6 +130,8 @@ resultText = findViewById(R.id.result_text);
 ```
 
 > ❓ ¿Qué pasaría si dejaras `EditText ageEdit = findViewById(...)` dentro de `onCreate()`?
+> 
+Si dejara EditText ageEdit = findViewById(...) dentro de onCreate(), crearía una variable local nueva con el mismo nombre que el atributo de la clase, que quedaría oculto. El atributo ageEdit seguiría siendo null, y al usarlo en calcularEdad() la app se cerraría con un NullPointerException.
 
 ## Paso 8 · Saca la lógica del botón a un método
 

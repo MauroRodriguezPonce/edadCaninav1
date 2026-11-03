@@ -14,8 +14,15 @@ public class MainActivity extends AppCompatActivity {
     private static final int EDAD_MINIMA = 1;
     private static final int EDAD_MAXIMA = 30; // ningún perro supera esta edad
 
+    private EditText ageEdit;
+    private TextView resultText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        ageEdit = findViewById(R.id.age_input);
+        resultText = findViewById(R.id.result_text);
+
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
